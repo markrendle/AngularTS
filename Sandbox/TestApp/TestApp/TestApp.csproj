@@ -78,6 +78,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\people.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,9 +111,9 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <ItemGroup>
+  <!--<ItemGroup>
     <TypeScriptCompile Include="$(ProjectDir)\**\*.ts" />
-  </ItemGroup>
+  </ItemGroup>-->
   <Target Name="BeforeBuild">
     <Exec Command="&quot;$(PROGRAMFILES)\Microsoft SDKs\TypeScript\0.8.0.0\tsc&quot; -target ES5 @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" />
   </Target>

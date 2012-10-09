@@ -4,8 +4,11 @@
     <title>AngularTS</title>
 </head>
 <body>
-  <div ng-controller="MainController">
+    <div ng-controller="HomeController">
         <h1>{{title}}</h1>
+        <ul>
+            <li ng-repeat="person in people">{{person.name}}</li>
+        </ul>
     </div>
     <script src="lib/angular/angular.js"></script>
     <script src="js/app.js"></script>

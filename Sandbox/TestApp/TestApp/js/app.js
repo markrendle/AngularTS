@@ -1,9 +1,13 @@
 var HomeController = (function () {
-    function HomeController($scope) {
-        this.initScope($scope);
+    function HomeController($scope, $http) {
+        $scope.title = "AngularTS";
+        $http.get("data/people.js").success(function (data) {
+            $scope.people = data;
+        });
     }
-    HomeController.prototype.initScope = function (scope) {
-        scope.title = "AngularTS";
-    };
+    HomeController.$inject = [
+        "$scope", 
+        "$http"
+    ];
     return HomeController;
 })();
