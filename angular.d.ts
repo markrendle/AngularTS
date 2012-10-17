@@ -6,7 +6,7 @@ interface angular {
     module(name: String, requires: string[], definition: any): Module;
     module(name: String, configFn: Function): Module;
 
-    element(dom:any): any;
+    element(element:HTMLElement): any;
 }
 
 interface Module {
