@@ -5,6 +5,8 @@ interface angular {
     // module(name: String, requires: string[], definition: Function): Module;
     module(name: String, requires: string[], definition: any): Module;
     module(name: String, configFn: Function): Module;
+
+    element(dom:any): any;
 }
 
 interface Module {
